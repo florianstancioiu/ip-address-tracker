@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@pionjs/pion": "^2.5.2"
+  },
+  "devDependencies": {
+    "@web/dev-server": "^0.4.4",
+    "typescript": "^5.4.5"
+  }
+}
