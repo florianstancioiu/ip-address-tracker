@@ -11,8 +11,8 @@ const Header = () => {
       ${headerStyle}
     </style>
     <div class="wrapper">
-      <app-search />
-      <app-card />
+      <app-search></app-search>
+      <app-card></app-card>
     </div>
   `;
 };

@@ -9,8 +9,8 @@ const App = () => {
       ${reset}
     </style>
     <div>
-      <app-header />
-      <app-map />
+      <app-header></app-header>
+      <app-map></app-map>
     </div>
   `;
 };
