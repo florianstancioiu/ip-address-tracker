@@ -30,4 +30,11 @@ h1 {
   right: 0;
   top: 0;
 }
+
+@media screen and (min-width: 1110px) {
+  .input-wrapper {
+    max-width: 555px;
+    margin: 0 auto 48px;
+  }
+}
 `;

@@ -7,4 +7,10 @@ export const headerStyle = `
   padding: 26px 24px;
   position: relative;
 }
+
+@media screen and (min-width: 1110px) {
+  .wrapper {
+    height: 280px;
+  }
+}
 `;
