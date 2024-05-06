@@ -29,6 +29,7 @@ h1 {
   position: absolute;
   right: 0;
   top: 0;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 1110px) {
