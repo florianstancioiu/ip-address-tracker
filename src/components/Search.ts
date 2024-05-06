@@ -14,8 +14,6 @@ const Search = () => {
     );
     const data = await response.json();
 
-    console.log(data);
-
     setLocationData(data);
   }, [ip]);
 

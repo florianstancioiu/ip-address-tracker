@@ -6,8 +6,6 @@ import { ipContext } from '../app';
 const Card = () => {
   const { locationData } = useContext(ipContext);
 
-  console.log(locationData);
-
   return html`
     <style>
       ${reset}
