@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "web-dev-server --node-resolve --open --watch"
+    "start": "web-dev-server --node-resolve --open --watch",
+    "build": "tsc -p tsconfig.build.json"
   },
   "dependencies": {
     "@pionjs/pion": "^2.5.2"
