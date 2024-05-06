@@ -1,8 +1,11 @@
 export const cardStyle = `
 :host {
   float: left;
+  padding: 24px;
   width: 100%;
-  padding: 0;
+  position: absolute;
+  left: 0;
+  z-index: 1000;
 }
 
 .inner-wrapper {
@@ -47,6 +50,14 @@ export const cardStyle = `
 }
 
 @media screen and (min-width: 1110px) {
+  :host{
+    float: left;
+    padding: 0;
+    width: 100%;
+    position: absolute;
+    z-index: 1000;
+  }
+
   .inner-wrapper {
     max-width: 1110px;
     margin: 0 auto;

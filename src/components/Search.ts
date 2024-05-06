@@ -1,8 +1,24 @@
-import { component, html } from '@pionjs/pion';
+import { component, html, useContext, useEffect } from '@pionjs/pion';
 import { searchStyle } from './Search.style';
 import { reset } from '../reset.css';
+import { ipContext } from '../app';
 
 const Search = () => {
+  const { ip, setIp, setLocationData } = useContext(ipContext);
+
+  useEffect(async () => {
+    const apiKey = 'at_SwtYifMWjcF7GCNWzRmkivTf1L0ow';
+
+    const response = await fetch(
+      `https://geo.ipify.org/api/v1?apiKey=${apiKey}&ipAddress=${ip}`
+    );
+    const data = await response.json();
+
+    console.log(data);
+
+    setLocationData(data);
+  }, [ip]);
+
   return html`
     <style>
       ${reset}
@@ -12,7 +28,11 @@ const Search = () => {
       <h1>IP Address Tracker</h1>
 
       <div class="input-wrapper">
-        <input placeholder="Search for any IP address or domain" />
+        <input
+          value=${ip}
+          @change=${(event) => setIp(event.target.value)}
+          placeholder="Search for any valid IP address"
+        />
         <svg
           class="input-chevron-right"
           width="58"

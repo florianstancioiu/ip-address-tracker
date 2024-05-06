@@ -1,8 +1,13 @@
-import { component, html } from '@pionjs/pion';
+import { component, html, useContext } from '@pionjs/pion';
 import { cardStyle } from './Card.style';
 import { reset } from '../reset.css';
+import { ipContext } from '../app';
 
 const Card = () => {
+  const { locationData } = useContext(ipContext);
+
+  console.log(locationData);
+
   return html`
     <style>
       ${reset}
@@ -13,19 +18,22 @@ const Card = () => {
         <div class="inner-wrapper-2">
           <div class="item">
             <p class="title">IP Address</p>
-            <p class="sub-title">192.212.174.101</p>
+            <p class="sub-title">${locationData?.ip}</p>
           </div>
           <div class="item">
             <p class="title">Location</p>
-            <p class="sub-title">Brooklyn, NY 10001</p>
+            <p class="sub-title">
+              ${locationData?.location?.city},
+              ${locationData?.location?.country}
+            </p>
           </div>
           <div class="item">
             <p class="title">Timezone</p>
-            <p class="sub-title">UTC -05:00</p>
+            <p class="sub-title">${locationData?.location?.timezone}</p>
           </div>
           <div class="item">
             <p class="title">ISP</p>
-            <p class="sub-title">SpaceX Starlink</p>
+            <p class="sub-title">${locationData?.isp}</p>
           </div>
         </div>
       </div>
