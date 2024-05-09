@@ -3,7 +3,26 @@ import { reset } from './reset.css';
 import './components/Header';
 import './components/Map';
 
-export const ipContext = createContext({
+export interface locationData {
+  ip?: string;
+  isp?: string;
+  location: {
+    city?: string;
+    country?: string;
+    timezone?: string;
+    lat: number;
+    lng: number;
+  };
+}
+
+export interface ipContext {
+  ip: string;
+  setIp: (ip: string) => void;
+  locationData: locationData;
+  setLocationData: (data: locationData) => void;
+}
+
+export const ipContext = createContext<ipContext>({
   ip: '',
   setIp: () => {},
   locationData: {

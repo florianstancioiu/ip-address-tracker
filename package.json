@@ -1,6 +1,7 @@
 {
   "scripts": {
     "start": "web-dev-server --node-resolve --open --watch",
+    "lint": "tsc",
     "build": "tsc -p tsconfig.build.json"
   },
   "dependencies": {

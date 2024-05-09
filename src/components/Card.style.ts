@@ -79,6 +79,7 @@ export const cardStyle = `
     text-align: left;
     border-right: 1px solid #ccc;
     padding-right: 32px;
+    max-width: 30%;
   }
 
   .item:last-child {

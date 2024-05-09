@@ -28,7 +28,11 @@ const Search = () => {
       <div class="input-wrapper">
         <input
           value=${ip}
-          @change=${(event) => setIp(event.target.value)}
+          @change=${(event: Event) => {
+            const target = event.target as HTMLInputElement;
+
+            setIp(target!.value);
+          }}
           placeholder="Search for any valid IP address"
         />
         <svg
